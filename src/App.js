@@ -4,7 +4,7 @@ import MainPage from "./containers/MainPage";
 
 function App() {
   return (
-      <div className="App">
+      <div className="App" data-test="appComponent">
         <MainPage/>
       </div>
   );

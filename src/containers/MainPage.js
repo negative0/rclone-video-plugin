@@ -54,7 +54,6 @@ class MainPage extends React.Component {
 	render () {
 
 		const {loadUrl, mimeType} = this.state;
-		// console.log(loadUrl, mimeType);
 		if(loadUrl && mimeType) {
 			const options = {
 				poster: "http://pic2.52pk.com/files/130514/1283314_143556_2145.jpg",
@@ -65,20 +64,23 @@ class MainPage extends React.Component {
 				subtitles: [],
 				defaultSubtitle: 'en'
 			}
-			return <ReactAwesomePlayer
-				options={options}
-				loadeddata={this.loadeddata}
-				canplay={this.canplay}
-				canplaythrough={this.canplaythrough}
-				play={this.play}
-				pause={this.pause}
-				waiting={this.waiting}
-				playing={this.playing}
-				ended={this.ended}
-				error={this.error}
-			/>
+			return (
+				<div data-test="mainPageComponent">
+					<ReactAwesomePlayer
+						options={options}
+						loadeddata={this.loadeddata}
+						canplay={this.canplay}
+						canplaythrough={this.canplaythrough}
+						play={this.play}
+						pause={this.pause}
+						waiting={this.waiting}
+						playing={this.playing}
+						ended={this.ended}
+						error={this.error}
+					/>
+				</div>);
 		}
-		return null;
+		return <div data-test="mainPageComponent"></div>;
 	}
 }
 export default MainPage;
