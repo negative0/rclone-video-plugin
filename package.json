@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "./",
   "rclone": {
-    "handleType": [
+    "handlesType": [
       "video/mp4"
     ]
   },
