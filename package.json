@@ -1,5 +1,5 @@
 {
-  "name": "video-plugin",
+  "name": "rclone-video-plugin",
   "author": "negative0",
   "version": "0.1.0",
   "private": true,
